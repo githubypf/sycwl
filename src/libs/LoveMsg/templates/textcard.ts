@@ -12,7 +12,7 @@
 import dayjs from '../../../utils/dayjs'
 
 // 相识的日子
-const start_stamp = '2021-03-26'
+const start_stamp = '2021-05-29'
 
 export const textCardTemplate = (data: TextCardTemplateProps) => {
   const {
@@ -31,6 +31,7 @@ export const textCardTemplate = (data: TextCardTemplateProps) => {
     lunarInfo,
   } = data
 
+  console.log(highest, '-highest')
   // 今日、恋爱天数
   const today = `${date.replace('-', '年').replace('-', '月')}日`
   const dateLength = dayjs(date).diff(start_stamp, 'day')
@@ -47,7 +48,7 @@ export const textCardTemplate = (data: TextCardTemplateProps) => {
 今日天气状况：
 天气：${weather}
 ${wind}：${windsc}
-温度：${lowest}℃ ~ ${highest}℃
+温度：${lowest} ~ ${highest}
 湿度：${humidity}\n`
 
   if (weather.includes('雨')) {
@@ -61,11 +62,11 @@ ${tips}\n`
   }
 
   // 最高温度
-  if (+highest <= 3) {
+  if (parseInt(highest) <= 10) {
     description += `
-哈喽哈喽~这里是来自崽崽的爱心提醒哦：
-今日最高温度仅为🥶 ${highest}℃，可冷可冷了~
-鱼崽崽可要注意保暖哦~\n`
+哈喽哈喽~这里是爱心提醒哦：
+今日最高温度仅为🥶 ${highest}可冷可冷了~
+小园可要注意保暖哦~\n`
   }
 
   //   if (air_tips) {
@@ -82,7 +83,7 @@ ${tips}\n`
   description += `
   [ 点我有惊喜 ] ❤️ 🧡 💛 💚 💖`
 
-  const title = `这是我们相识的第 ${dateLength} 天`
+  const title = `这是我们在一起的第 ${dateLength} 天`
 
   return {
     msgtype: 'textcard',
@@ -92,7 +93,7 @@ ${tips}\n`
       //   url: 'https://api.lovelive.tools/api/SweetNothings',
       //   url: 'https://v1.jinrishici.com/all.svg',
       url: 'https://api.vvhan.com/api/60s', // 60s看世界
-      btntxt: 'By崽崽',
+      btntxt: '查看新闻',
     },
   }
 }

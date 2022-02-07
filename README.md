@@ -17,7 +17,7 @@
   </a>
 </p>
 
-<p align="center">微信通知，每天给女朋友发早安、情话、诗句、天气信息等</p>
+<p align="center">1微信通知，每天给女朋友发早安、情话、诗句、天气信息等</p>
 <p align="center">微信通知能力的核心链路已完成，就消息内容而言不限，基于此，可以根据个人需求完成各种私人定制</p>
 
 <!-- [![ci](https://github.com/JS-banana/notify-server/actions/workflows/goodMorning.yml/badge.svg)](https://github.com/JS-banana/notify-server/actions/workflows/goodMorning.yml) -->
@@ -26,7 +26,7 @@
 
 ## 已添加功能
 
-- [x] 每天给女友发早安和土味情话1
+- [x] 每天给女友发早安和土味情话
   <details><summary>点击查看详细内容</summary>
   
   - 个人定制化信息

@@ -12,11 +12,10 @@ export const textTemplate = (data: TextTemplateProps) => {
 
   // 工作日/休息日，需要排除节假日
   const week = weekToday()
-  console.log(week, '=week')
   if (!['星期六', '星期日'].includes(week)) {
     text += `
 如果小园同学已经起床啦！向你说早安呦~，记得吃早饭呀😆\n
-嗯哼哼~今天可是${week}哦，上班别迟到了哦~`
+嗯哼哼~今天可是${week}哦，上班别迟到了哦~搞快点~搞快点`
   } else {
     text += `
 如果小园同学还没起床呀！就等着小园同学起床给我说早安呦🤣

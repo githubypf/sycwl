@@ -28,8 +28,9 @@ export async function wxNotify(config: any) {
       ...config,
     }
     const option = { ...defaultConfig, ...config }
-    const res = await postMsg(accessToken, option)
-    console.log('wx:信息发送成功！', res)
+    console.log(option, '-option')
+    // const res = await postMsg(accessToken, option)
+    // console.log('wx:信息发送成功！', res)
     return true
   }
   catch (error) {

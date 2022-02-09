@@ -13,10 +13,12 @@ const WEEKS: { [key: number]: string } = {
   5: '星期五',
   6: '星期六',
   0: '星期日',
+  8: '星期一',
 }
 
 export const weekToday = () => {
-  const week = dayjs().get('days')
+  let week = dayjs().get('days')
+  week = week + 1
   return WEEKS[week]
 }
 
